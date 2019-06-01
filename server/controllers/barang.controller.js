@@ -12,7 +12,7 @@ const create = (req, res) => {
       });
     }
     res.status(200).json({
-      message: 'Berhasil Membuat Item!'
+      barang
     });
   });
 };
@@ -53,10 +53,6 @@ const list = (req, res) => {
   });
 };
 
-const contoh = (req, res) => {
-  return res.json({ ini: 'nn' });
-};
-
 const update = (req, res, next) => {
   let barang = req.barang;
   barang = _.extend(barang, req.body);
@@ -91,6 +87,5 @@ export default {
   read,
   list,
   remove,
-  update,
-  contoh
+  update
 };

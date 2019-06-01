@@ -7,7 +7,8 @@ const BarangSchema = new mongoose.Schema({
     required: 'Nama di perlukan'
   },
   stok: {
-    type: Number
+    type: Number,
+    default: 0
   },
   satuan: {
     type: String
