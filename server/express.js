@@ -52,6 +52,10 @@ app.use('/', userRoutes);
 app.use('/', authRoutes);
 app.use('/', barangRoutes);
 
+app.get('/', (req, res) => {
+  res.status(200).send('Aplikasi Backend ini berkerja!!!!');
+});
+
 // Catch unauthorised errors
 app.use((err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {
