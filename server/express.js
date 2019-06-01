@@ -43,7 +43,7 @@ app.use(compress());
 // secure apps by setting various HTTP headers
 app.use(helmet());
 // enable CORS - Cross Origin Resource Sharing
-app.use(cors({ credentials: true, origin: 'http://localhost:3001' }));
+app.use(cors({ credentials: true, origin: 'http://stok-barang.surge.sh' }));
 
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
 
